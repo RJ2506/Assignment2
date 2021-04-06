@@ -90,15 +90,16 @@ li {
     border-radius: 50%;
     outline:none;
     outline-color: #fffaf3;
-    background-color: #f6c177;
+    background-color: #575279;
     position:absolute;
     top: 15px; 
     right: 140px;
 }
 
-.dark:hover {
-    background-color: #817c9c;
+.toggle_dark_button {
+    background-color: #f6c177;;
 }
+
 
 .toggle-dark {
     background-color: #232136;
@@ -126,8 +127,7 @@ li {
         padding: 10px;
         margin-left: 50px;
         text-align: left;
-        background-color: #f2e9de;
-        color:#286983 ;
+        
     }
 
     li {
