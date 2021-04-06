@@ -102,10 +102,27 @@ li {
 
 
 .toggle-dark {
-    background-color: #232136;
+    background-color: #191724;
     color: #faf4ed;
 }
 
+.toggle_textinput {
+    background-color: #59546d;
+    color: #faf4ed;
+    height: 150px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.toggle-save {
+    background-color: #2a273f;
+    color: #faf4ed;
+}
+
+.toggle-delete {
+    background-color: #2a273f;
+    color: #faf4ed;
+}
 .box {
     margin: 10px;
     max-width: 500px;
@@ -125,25 +142,40 @@ li {
     gap: 10px ;
 }
 
-#save {
+.save {
     color: #286983;
     border: none;
 }
 
-#save:hover {
+.save:hover {
     background-color:#eb6f92 ;
 }
 
-#delete {
+.delete {
     color: #286983;
     border: none;
 }
 
-#delete:hover {
+.delete:hover {
     background-color: #eb6f92;
 }
 
+.textarea {
+    height: 1.5rem;
+    width: 1rem;
+    top: 15px; 
+    left: 10px;
+    text-align: center;
 
+}
+
+.hide {
+    height: 1.5rem;
+    width: 1rem;
+    top: 15px; 
+    left: 10px;
+    text-align: center;
+}
 
 @media screen and (max-width: 580px){
     .container {
