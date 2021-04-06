@@ -22,26 +22,28 @@
 
 .header {
     grid-area: h;
-    background-color: #f2e9de;
     direction: rtl;
-    color:#286983 ;      
+    background-color: #f2e9de;
+    color:#286983 ;
 }
 
 .sidebar {
     grid-area: s;
-    background-color: #e0def4;
+    background-color: #f2e9de;
+    color:#286983 ;
 }
 
 .content {
     grid-area: c;
-    background-color:#f2e9de;
+    background-color: #f2e9de;
+    color:#286983 ;
     padding: 10px;
 }
 
 .footer {
     grid-area: f;
-    background-color:#f2e9de;
-    color: #286983;
+    background-color: #f2e9de;
+    color:#286983 ;
     text-align: center;
     padding: 1rem;
 }
@@ -74,78 +76,31 @@ li {
     padding: 10px;
     margin-left: 200px;
     text-align: left;
-    color: #286983;
-    background-color:#e0def4 ;
+    background-color: #f2e9de;
+    color:#286983 ;
 }
 
 .side_button:hover {
     background-color:#9ccfd8 ;
 }
-label {
-    display: block;
-    text-align: left;
-    margin-right: 10px;
-    color: #286983;
-}
-textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: #286983;
-}
-.box {
-    padding: 10px;
-    width: 200px;
-    color: #286983;
+
+.dark {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    outline:none;
+    outline-color: #fffaf3;
+    background-color: #575279;
+    position:absolute;
+    top: 15px; 
+    right: 140px;
 }
 
-.save {
-    color: #286983;
-    border: none;
+.toggle-dark {
+    background-color: #232136;
+    color: #faf4ed;
 }
 
-.save:hover {
-    background-color:#eb6f92 ;
-}
-
-.delete {
-    color: #286983;
-    border: none;
-}
-
-.delete:hover {
-    background-color: #eb6f92;
-}
-
-.my_notes {
-    border: none;
-    color: #286983;
-    background-color: #e0def4;
-}
-
-.my_notes:hover {
-    background-color: #9ccfd8;
-}
-
-.note_one {
-    border:none;
-    color:#286983;
-    background-color: #e0def4;
-}
-
-.note_one:hover {
-    background-color: #9ccfd8;
-}
-
-.note_two {
-    border: none;
-    color: #286983;
-    background-color: #e0def4;
-}
-
-.note_two:hover {
-    background-color: #9ccfd8;
-}
 
 @media screen and (max-width: 580px){
     .container {
@@ -161,137 +116,31 @@ textarea {
         width: 100vw;
         height: 100vh;
     }
-    .header {
-        grid-area: h;
-        background-color: #faf4ed;
-        direction: rtl;
+
+    .side_button {
+        border: none;
+        padding: 10px;
+        margin-left: 50px;
+        text-align: left;
+        background-color: #f2e9de;
         color:#286983 ;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    .dark {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        outline:none;
+        outline-color: #fffaf3;
+        background-color: #575279;
+        position:absolute;
+        top: 5px; 
+        right: 100px;
         
     }
     
-    .sidebar {
-        grid-area: s;
-        background-color: #e0def4;
-    }
-    
-    .content {
-        grid-area: c;
-        background-color: #faf4ed;
-        padding: 10px;
-    }
-    
-    .footer {
-        grid-area: f;
-        background-color: #faf4ed;
-        color: #286983;
-        text-align: center;
-        padding: .5rem;
-    }
-    
-    .buttons {
-        border: none;
-        padding: 0 10px;
-        text-align: center;
-        color: #286983;
-        border-radius: 5px;
-        background-color:#faf4ed ;
-    }
-    
-    .buttons:hover {
-        background-color:#9ccfd8;
-    }
-    
-    .top {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    li {
-        margin: 2px;
-        padding: 5px;
-        list-style-type: none;
-       
-    }
-    
-    .side_button {
-        border: none;
-        margin-left: 50px;
-        text-align: left;
-        color: #286983;
-        background-color:#e0def4;
-    }
-    
-    .side_button:hover {
-        background-color:#9ccfd8;
-    }
-    
-    label {
-        display: block;
-        text-align: left;
-        margin-right: 5px;
-        color: #286983;
-    }
-    textarea {
-        font-size: 15px;
-        padding: 0px;
-        width: 150px;
-        height: 90;
-        border-radius: 2px;
-        color: #286983;
-        border: none;
-    }
-
-    .box {
-        padding: 10px;
-        width: 100px;
-    }
-
-    .save {
-        color: #286983;
-        border: none;
-    }
-
-    .save:hover {
-        background-color:#eb6f92 ;
-    }
-
-    .delete {
-        color: #286983;
-        border: none;
-    }
-
-    .delete:hover {
-        background-color: #eb6f92;
-    }
-    .my_notes {
-        border: none;
-        color: #286983;
-        background-color: #e0def4;
-    }
-    
-    .my_notes:hover {
-        background-color: #9ccfd8;
-    }
-    
-    .note_one {
-        border:none;
-        color:#286983;
-        background-color: #e0def4;
-    }
-    
-    .note_one:hover {
-        background-color: #9ccfd8;
-    }
-    
-    .note_two {
-        border: none;
-        color: #286983;
-        background-color: #e0def4;
-    }
-    
-    .note_two:hover {
-        background-color: #9ccfd8;
-    }
-    
-
 }
