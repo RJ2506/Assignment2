@@ -12,7 +12,6 @@ function theme() {
     sidebar.classList.toggle('toggle-dark');
     content.classList.toggle('toggle-dark');
     footer.classList.toggle('toggle-dark');
-    buttons.classList.toggle('toggle-dark');
     side_button.classList.toggle('toggle-dark');
     switch_bar.classList.toggle('toggle_dark_button')
 

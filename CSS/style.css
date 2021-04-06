@@ -106,6 +106,44 @@ li {
     color: #faf4ed;
 }
 
+.box {
+    margin: 10px;
+    max-width: 500px;
+    color: #286983;
+}
+
+.textinput {
+    height: 150px;
+    background-color: #fffaf3;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.note-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px ;
+}
+
+#save {
+    color: #286983;
+    border: none;
+}
+
+#save:hover {
+    background-color:#eb6f92 ;
+}
+
+#delete {
+    color: #286983;
+    border: none;
+}
+
+#delete:hover {
+    background-color: #eb6f92;
+}
+
+
 
 @media screen and (max-width: 580px){
     .container {
