@@ -90,10 +90,14 @@ li {
     border-radius: 50%;
     outline:none;
     outline-color: #fffaf3;
-    background-color: #575279;
+    background-color: #f6c177;
     position:absolute;
     top: 15px; 
     right: 140px;
+}
+
+.dark:hover {
+    background-color: #817c9c;
 }
 
 .toggle-dark {
