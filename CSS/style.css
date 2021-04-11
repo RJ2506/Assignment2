@@ -199,6 +199,11 @@ li {
     font-size: 25px;
 }
 
+.divList {
+    font-size: 18px;
+    color: #393552;
+}
+
 @media screen and (max-width: 580px){
     .container {
         display: grid;
@@ -286,5 +291,10 @@ li {
         padding: 10px;
         color:#31748f;
         font-size: 15px;
+    }
+
+    .divList {
+        font-size: 10px;
+        color: #393552;
     }
 }
