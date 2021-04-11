@@ -172,6 +172,8 @@ li {
     color:#286983;
     font-size: 25px;
     align-self: center;
+    border-style: dashed;
+    padding: 5px;
 }
 
 .viewNotesBtn:hover {
@@ -252,8 +254,10 @@ li {
     .viewNotesBtn {
         background-color: #faf4ed;
         color:#286983;
-        font-size: 15px;
+        font-size: 10px;
         align-self: center;
+        border-style: dashed;
+        padding: 5px;
     }
     
     [contenteditable] {
