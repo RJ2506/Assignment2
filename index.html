@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b35f004b98.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script defer src="./JS/app.js"></script>
-    <title>layout 1</title>
+    <title>Web Note</title>
 </head>
 <body>
     <div class="container">
-        <button class="dark"></button>
+
         <nav class="header">
+            <button class="dark"></button>
             <ul class="top">
                 <li>About</li>
                 <li>Docs</li>
             </ul>
         </nav>
+
         <nav class="sidebar">
-            <button class="side_button" type="button">
-                >>
-            </button>
-        </nav>
-        <div class="content">
-            <div class="box">
-                <button class="textarea">+</button>
-                <div class="textinput" contenteditable="true"></div>
-                
+            <div>
+                <span onclick="createTitleNoteContent()"><i class="fas fa-angle-double-right"></i></span>
             </div>
+            <ul id="title"></ul>
+        </nav>
+
+        <div class="content">
+            <div>
+                <span onclick="createContent()"><i class="fas fa-comment"></i></span>
+            </div>
+            <div id="contentNote"></div>
+            <div id="view-note"></div>               
         </div>
+
         <div class="footer">
             <p>created by RJ</p>
         </div>

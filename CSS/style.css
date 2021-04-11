@@ -71,18 +71,7 @@ li {
     list-style-type: none;    
 }
 
-.side_button {
-    border: none;
-    padding: 10px;
-    margin-left: 200px;
-    text-align: left;
-    background-color: #f2e9de;
-    color:#286983 ;
-}
 
-.side_button:hover {
-    background-color:#9ccfd8 ;
-}
 
 .dark {
     height: 1rem;
@@ -102,79 +91,112 @@ li {
 
 
 .toggle-dark {
-    background-color: #191724;
+    background-color: #555169;
     color: #faf4ed;
 }
 
-.toggle_textinput {
-    background-color: #59546d;
-    color: #faf4ed;
-    height: 150px;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.toggle-save {
-    background-color: #2a273f;
-    color: #faf4ed;
-}
-
-.toggle-delete {
-    background-color: #2a273f;
-    color: #faf4ed;
-}
 .box {
     margin: 10px;
     max-width: 500px;
     color: #286983;
 }
 
-.textinput {
-    height: 150px;
-    background-color: #fffaf3;
-    border-radius: 5px;
-    font-size: 1rem;
+.fa-comment:before {
+    color: #f6c177;
 }
 
-.note-btns {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px ;
+#contentNote {
+    padding: 10px;
+    max-width: 600px;
 }
 
-.save {
-    color: #286983;
+[contenteditable] {
+    font-size: 25px;
+    background-color: #faf4ed;
+    color:#286983;
+}
+
+
+[contenteditable] > div {
+    font-size: 18px;
+    color: #393552;
+}
+
+[contenteditable]:focus {
+    outline: none;
+}
+
+#deleteButton {
+    font-size: 18px;
+    padding-top: 5px;
     border: none;
+    margin: 5px;
+    background-color:#f2e9de ;
+    color:#286983;
 }
 
-.save:hover {
-    background-color:#eb6f92 ;
+#deleteButton:hover {
+    background-color: #f6c177;
 }
 
-.delete {
-    color: #286983;
+#saveButton {
+    font-size: 18px;
+    padding-top: 5px;
     border: none;
+    margin: 5px;
+    background-color:#f2e9de ;
+    color:#286983;
 }
 
-.delete:hover {
-    background-color: #eb6f92;
+#saveButton:hover {
+    background-color: #f6c177;
 }
 
-.textarea {
-    height: 1.5rem;
-    width: 1rem;
-    top: 15px; 
-    left: 10px;
-    text-align: center;
-
+#saveButtonDark {
+    font-size: 18px;
+    padding-top: 5px;
+    border: none;
+    margin: 5px;
+    background-color:#191724;
+    color:#faf4ed;
 }
 
-.hide {
-    height: 1.5rem;
-    width: 1rem;
-    top: 15px; 
-    left: 10px;
-    text-align: center;
+#titleNote {
+    padding: 20px;
+    color: #286983;
+}
+
+#title {
+    list-style: none;
+    padding: 10px;
+}
+
+.viewNotesBtn {
+    background-color: #faf4ed;
+    color:#286983;
+    font-size: 25px;
+    align-self: center;
+}
+
+.viewNotesBtn:hover {
+    background-color: #9ccfd8;
+}
+
+.fa-angle-double-right {
+    margin-left: 200px;
+}
+
+#view-note {
+    padding: 10px;
+    max-width: 600px;
+}
+
+.fa-trash-alt {
+    color: #eb6f92;
+}
+
+.text_note {
+    max-width: 600px;
 }
 
 @media screen and (max-width: 580px){
@@ -192,12 +214,8 @@ li {
         height: 100vh;
     }
 
-    .side_button {
-        border: none;
-        padding: 10px;
-        margin-left: 50px;
-        text-align: left;
-        
+    .fa-angle-double-right {
+        margin-left: 100px;
     }
 
     li {
@@ -216,5 +234,23 @@ li {
         right: 100px;
         
     }
+
+    .viewNotesBtn {
+        background-color: #faf4ed;
+        color:#286983;
+        font-size: 10pxpx;
+        align-self: center;
+    }
     
+    [contenteditable] {
+        font-size: 10px;
+        background-color: #faf4ed;
+        color:#286983;
+    }
+    
+    
+    [contenteditable] > div {
+        font-size: 8px;
+        color: #393552;
+    }
 }
