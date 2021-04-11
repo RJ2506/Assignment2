@@ -107,14 +107,12 @@ function createTitle() {
 }
 
 
-
 function viewNoteText() {
     
     let str = ''
     for (const body of notesArray) {
         let length_list = notesArray.length
         if (body === notesArray[length_list - 1]) {
-            // const list_title = document.createTextNode(title["title"])
             str += body['body']
             return str
         } 
@@ -138,6 +136,8 @@ function defineTextView() {
     `
     return html
 }
+
+// created a functino when the title on the side menu is click
 
 function createViewNote() {
     const cleanUpButton = document.querySelector('#view-note')
