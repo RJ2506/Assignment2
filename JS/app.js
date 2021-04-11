@@ -107,37 +107,6 @@ function createTitle() {
     document.querySelector('#title').appendChild(listElement)
 }
 
-
-function viewNoteText() {
-    const divElement = document.createElement('div')
-    let length_list = notesArray.length
-    let row = notesArray[length_list - 1]['body'].split('\n')
-    for (line of row) {
-        const divs = document.createElement('div')
-        divs.setAttribute('class', 'divList')
-        divs.innerHTML = line
-        divElement.appendChild(divs)
-    } 
-    return divElement
-    
-}   
-
-
-function deleteTitleNotes() {
-    deleteViewNotes()
-    deleteIcon()
-}
-
-function deleteViewNotes() {
-    const content = document.querySelector('.text_note')
-    content.remove()
-}
-
-function deleteIcon() {
-    const trashIcon = document.querySelector('.fa-trash-alt')
-    trashIcon.remove()
-}
-
 function defineTextView() {
     html = `
     <div id="text_view">
@@ -165,9 +134,38 @@ function createViewNote() {
     removeTitle()
 }
 
+function viewNoteText() {
+    const divElement = document.createElement('div')
+    let length_list = notesArray.length
+    let row = notesArray[length_list - 1]['body'].split('\n')
+    for (line of row) {
+        const divs = document.createElement('div')
+        divs.setAttribute('class', 'divList')
+        divs.innerHTML = line
+        divElement.appendChild(divs)
+    } 
+    return divElement
+    
+}   
+
 function removeTitle() {
     const titleMenu = document.querySelector('.list-title')
     
     titleMenu.remove()
 }
 
+function deleteViewNotes() {
+    const content = document.querySelector('.text_note')
+    content.remove()
+}
+
+function deleteIcon() {
+    const trashIcon = document.querySelector('.fa-trash-alt')
+    trashIcon.remove()
+}
+
+
+function deleteTitleNotes() {
+    deleteViewNotes()
+    deleteIcon()
+}
