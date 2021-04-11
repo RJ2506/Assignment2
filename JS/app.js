@@ -94,7 +94,6 @@ function titleText() {
 // create button to display title
 
 function createTitle() {
-    let str = ''
     const buttonElement = document.createElement('button')
     buttonElement.setAttribute('class', 'viewNotesBtn')
     buttonElement.setAttribute('onclick', 'createViewNote()')
@@ -113,7 +112,7 @@ function defineTextView() {
         <button class="fas fa-trash-alt" onclick="deleteTitleNotes()"></button>
     </div>
     `
-    return html
+    return html 
 }
 
 // created a function when the title on the side menu is click
@@ -150,22 +149,13 @@ function viewNoteText() {
 
 function removeTitle() {
     const titleMenu = document.querySelector('.list-title')
-    
     titleMenu.remove()
-}
-
-function deleteViewNotes() {
-    const content = document.querySelector('.text_note')
-    content.remove()
-}
-
-function deleteIcon() {
-    const trashIcon = document.querySelector('.fa-trash-alt')
-    trashIcon.remove()
 }
 
 
 function deleteTitleNotes() {
-    deleteViewNotes()
-    deleteIcon()
+    const trashIcon = document.querySelector('.fa-trash-alt')
+    trashIcon.remove()
+    const content = document.querySelector('.text_note')
+    content.remove()
 }
