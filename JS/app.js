@@ -21,7 +21,7 @@ switch_bar.addEventListener('click', theme, false)
 
 //Note area Array and the Note area
 
-const notesArray = []
+let notesArray = []
 
 function defineNoteAreaSection() {
     html = `
@@ -101,6 +101,7 @@ function createTitle() {
     buttonElement.innerHTML = titleText()
 
     const listElement = document.createElement('li')
+    listElement.setAttribute('class', 'list-title')
     listElement.appendChild(buttonElement)
     
     document.querySelector('#title').appendChild(listElement)
@@ -108,51 +109,64 @@ function createTitle() {
 
 
 function viewNoteText() {
+    const divElement = document.createElement('div')
+    let length_list = notesArray.length
+    let row = notesArray[length_list - 1]['body'].split('\n')
+    for (line of row) {
+        const divs = document.createElement('div')
+        divs.innerHTML = line
+        divElement.appendChild(divs)
+    } 
+    return divElement
     
-    let str = ''
-    for (const body of notesArray) {
-        let length_list = notesArray.length
-        if (body === notesArray[length_list - 1]) {
-            str += body['body']
-            return str
-        } 
-       }   
-}
+}   
 
+
+function deleteTitleNotes() {
+    deleteViewNotes()
+    deleteIcon()
+}
 
 function deleteViewNotes() {
     const content = document.querySelector('.text_note')
-    const trashIcon = document.querySelector('.fa-trash-alt')
     content.remove()
-    trashIcon.remove()
 }
 
+function deleteIcon() {
+    const trashIcon = document.querySelector('.fa-trash-alt')
+    trashIcon.remove()
+}
 
 function defineTextView() {
     html = `
     <div id="text_view">
-        <button class="fas fa-trash-alt" onclick="deleteViewNotes()"></button>
+        <button class="fas fa-trash-alt" onclick="deleteTitleNotes()"></button>
     </div>
     `
     return html
 }
 
-// created a functino when the title on the side menu is click
+// created a function when the title on the side menu is click
 
 function createViewNote() {
     const cleanUpButton = document.querySelector('#view-note')
     cleanUpButton.insertAdjacentHTML('beforeend', defineTextView())
     
     const divElement = document.createElement('div')
-    divElement.innerHTML = viewNoteText()
+    divElement.appendChild(viewNoteText())
 
     const textViewBox = document.createElement('div')
     textViewBox.setAttribute("class", "text_note")
-    textViewBox.setAttribute("contenteditable", "true")
     textViewBox.innerText = titleText()
     textViewBox.appendChild(divElement)
- 
+
     cleanUpButton.appendChild(textViewBox)
+    removeTitle()
+}
+
+function removeTitle() {
+    const titleMenu = document.querySelector('.list-title')
     
+    titleMenu.remove()
 }
 
