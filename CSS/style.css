@@ -101,10 +101,6 @@ li {
     color: #286983;
 }
 
-.fa-comment:before {
-    color: #f6c177;
-}
-
 #contentNote {
     padding: 10px;
     max-width: 600px;
@@ -112,6 +108,7 @@ li {
 
 [contenteditable] {
     font-size: 25px;
+    padding: 5px;
     background-color: #faf4ed;
     color:#286983;
 }
@@ -143,7 +140,6 @@ li {
     font-size: 18px;
     padding-top: 5px;
     border: none;
-    margin: 5px;
     background-color:#f2e9de ;
     color:#286983;
 }
@@ -197,6 +193,7 @@ li {
 
 .text_note {
     max-width: 600px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 580px){
@@ -215,7 +212,7 @@ li {
     }
 
     .fa-angle-double-right {
-        margin-left: 100px;
+        margin-left: 80px;
     }
 
     li {
@@ -235,10 +232,15 @@ li {
         
     }
 
+    .toggle_dark_button {
+    background-color: #f6c177;;
+}
+
+
     .viewNotesBtn {
         background-color: #faf4ed;
         color:#286983;
-        font-size: 10pxpx;
+        font-size: 10px;
         align-self: center;
     }
     
