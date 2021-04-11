@@ -192,8 +192,11 @@ li {
 }
 
 .text_note {
+    background-color: #faf4ed;
     max-width: 600px;
-    padding: 5px;
+    padding: 10px;
+    color:#31748f;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 580px){
@@ -277,4 +280,11 @@ li {
         color:#286983;
     }
 
+    .text_note {
+        background-color: #faf4ed;
+        max-width: 600px;
+        padding: 10px;
+        color:#31748f;
+        font-size: 15px;
+    }
 }
