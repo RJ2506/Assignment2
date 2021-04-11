@@ -114,6 +114,7 @@ function viewNoteText() {
     let row = notesArray[length_list - 1]['body'].split('\n')
     for (line of row) {
         const divs = document.createElement('div')
+        divs.setAttribute('class', 'divList')
         divs.innerHTML = line
         divElement.appendChild(divs)
     } 
