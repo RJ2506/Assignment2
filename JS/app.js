@@ -134,7 +134,7 @@ function createViewNote(id) {
     textViewBox.appendChild(divElement)
 
     cleanUpButton.appendChild(textViewBox)
-    removeTitle()
+    
 }
 
 function viewNoteText(id) {
@@ -151,16 +151,14 @@ function viewNoteText(id) {
     
 }   
 
-function removeTitle() {
-    const titleMenu = document.querySelector('.list-title')
-    titleMenu.remove()
-}
-
 
 function deleteTitleNotes() {
     const trashIcon = document.querySelector('.fa-trash-alt')
     trashIcon.remove()
     const content = document.querySelector('.text_note')
     content.remove()
+    const titleMenu = document.querySelector('.list-title')
+    titleMenu.remove()
+
 }
 
