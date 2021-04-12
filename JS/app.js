@@ -79,11 +79,11 @@ function deleteNote() {
 
 //inputs side menu titles
 
-function titleText() {
+function titleText(id) {
     let str = ''
     for (const title of notesArray) {
         let length_list = notesArray.length
-        if (title === notesArray[length_list - 1]) {
+        if (title === notesArray[id]) {
             const list_title = document.createTextNode(title["title"])
             str += `${list_title.textContent}\n`
             return str
@@ -91,19 +91,23 @@ function titleText() {
     }  
 }
 
-// create button to display title
 
+// create button to display title
+let number = 0
 function createTitle() {
+    
     const buttonElement = document.createElement('button')
     buttonElement.setAttribute('class', 'viewNotesBtn')
-    buttonElement.setAttribute('onclick', 'createViewNote()')
-    buttonElement.innerHTML = titleText()
+    buttonElement.setAttribute('onclick', 'createViewNote('+number+')')
+
+    buttonElement.innerHTML = titleText(number)
 
     const listElement = document.createElement('li')
     listElement.setAttribute('class', 'list-title')
     listElement.appendChild(buttonElement)
     
     document.querySelector('#title').appendChild(listElement)
+    number += 1
 }
 
 function defineTextView() {
@@ -117,26 +121,26 @@ function defineTextView() {
 
 // created a function when the title on the side menu is click
 
-function createViewNote() {
+function createViewNote(id) {
     const cleanUpButton = document.querySelector('#view-note')
     cleanUpButton.insertAdjacentHTML('beforeend', defineTextView())
     
     const divElement = document.createElement('div')
-    divElement.appendChild(viewNoteText())
+    divElement.appendChild(viewNoteText(id))
 
     const textViewBox = document.createElement('div')
     textViewBox.setAttribute("class", "text_note")
-    textViewBox.innerText = titleText()
+    textViewBox.innerText = titleText(id)
     textViewBox.appendChild(divElement)
 
     cleanUpButton.appendChild(textViewBox)
     removeTitle()
 }
 
-function viewNoteText() {
+function viewNoteText(id) {
     const divElement = document.createElement('div')
     let length_list = notesArray.length
-    let row = notesArray[length_list - 1]['body'].split('\n')
+    let row = notesArray[id]['body'].split('\n')
     for (line of row) {
         const divs = document.createElement('div')
         divs.setAttribute('class', 'divList')
@@ -159,3 +163,4 @@ function deleteTitleNotes() {
     const content = document.querySelector('.text_note')
     content.remove()
 }
+
